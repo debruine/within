@@ -22,7 +22,7 @@ source("scripts/func.R") # helper functions
 ## UI ----
 ui <- dashboardPage(
     skin = "blue",
-    dashboardHeader(title = "Within-subjects Forensics",
+    dashboardHeader(title = "Within-subject t-test forensics",
         titleWidth = "calc(100% - 44px)" # puts sidebar toggle on right
     ),
     dashboardSidebar(disable = TRUE),
@@ -52,7 +52,8 @@ ui <- dashboardPage(
                    p("Given a t-value or p-value, get the possible correlations for one- and two-tailed tests."),
                    numericInput("reported_t", "t-value", NULL),
                    numericInput("reported_p", "p-value", NULL, min = 0, max = 1)
-               )
+               ),
+               tags$a(href="https://github.com/debruine/within", "Code & Citation")
         ),
         column(width = 8,
                box(title = "r-values", width = 6, solidHeader = TRUE,
