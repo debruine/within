@@ -1,0 +1,18 @@
+/* app-specific css */
+
+#input_box .shiny-input-container label,
+#test_box .shiny-input-container label {
+  /*float: left;
+  clear: left;*/
+  width: 30%;
+  margin-right: 5%;
+  margin-bottom: 0.25em;
+  text-align: right;
+}
+
+#input_box .shiny-input-container input[type="number"],
+#test_box .shiny-input-container input[type="number"] {
+  float: right;
+  width: 65%;
+  margin-bottom: 0.25em;
+}
